@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>GesDoc</title>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <script type="text/javascript" src="JS/jquery.min.js"></script>
+        <script type="text/javascript" src="JS/sistema.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js" > </script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" > </script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+        <link rel="shortcut icon" href="Imagenes/icono.ico">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/estilo.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js" > </script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" > </script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js" > </script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" > </script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/alertify.min.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>
+        
+      </head>
+    <body>
+      <!--Login incorrecto-->
+        <div class="error">
+        <span>Datos de ingreso no validos, intente nuevamente por favor!</span>
+        </div>
+          <!--Login correcto-->
+            <div class="bien">       
+            <span>Datos de ingreso Validos.</span>
+            </div>
+              <!--Informa si la HL consultada, se encuentra en la BD-->
+                <div class="errorHL">
+                <span>Los datos Ingresados no se encuentran en nuestro sistema de información!</span>
+                </div>
+                  <!--Informa si la HL registrada, ya encuentra en la BD-->
+                    <div class="error1">
+                    <span>Historia laboral Ya Registra en Nuestro Sistema Revise los Datos</span>
+                    </div>
+                      <!--Informa si la HL, se actualiza correctamente-->
+                        <div class="actualizo">
+                        <span>Los datos Ingresados se actualizaron correctamente!</span>
+                        </div>
+                          <!--Informa si la HL, fue registrada exitosamente-->
+                            <div class="bien1">
+                            <span>Historia Laboral Registrada con exito.</span>
+                            </div>
+                            <!--Informa si la HL, fue devuelta exitosamente-->
+                            <div class="bien2">
+                              <span>Historia Laboral Devuelta con exito.</span>
+                              </div>
+                             <!--Informa si la HL, NO fue devuelta exitosamente-->
+                              <div class="error2">
+                                <span>Error en la Historia Laboral que quiere devolver, Debe revisar las notificaciones.
+                                  <span class="closeerror" id="closeerror">X</span>
+                                </span>
+                                </div>  
+        <nav id="resp">
+          <a id="resp-menu" class="responsive-menu" href="#"><i class="fa fa-reorder"></i> Menu</a>   
+          <a id="myBtnquincena"><img class="ico" id="ico" src="/Imagenes/ImagenSErv.ico" alt=""> </a>
+            <!--Menu-->
+                <ul class="menu">    
+                  <!--Menu -> Home-->          
+                      <li><a class="homer" href="#"><i class="fa fa-home"></i> HOME</a>
+                        <ul class="sub-menu" id="sub-menu1">
+                          <li><a href="#one"><i class='fas fa-archive' style='font-size:14px'></i> Gestión Documental</a></li>
+                            <li><a href="#two"><i class='fas fa-chart-line' style='font-size:16px'></i> PGD</a></li>
+                              <li><a href="#three"><i class='fas fa-print' style='font-size:14px'></i> Digitalización Documental</a></li>
+                                <li><a href="#four"><i class="fas fa-gavel" style='font-size:14px'></i> Legislación Documental</a></li>
+                                <li><a id="llevamapa" href="#gesdoc"><i class='fas fa-chart-pie'style='font-size:14px'></i> Mapa de Procesos</a></li>
+                        </ul>
+                      </li>
+                        <!--Menu -> Usuario--> 
+                            <li><a href="#"><i class="fa fa-user"></i> Usuario</a>
+                              <ul class="sub-menu">
+                                <li><a href="#" id="login-button"><i class="fas fa-lock-open" style='font-size:16px; position: inherit;'></i> Iniciar Sesión</a></li>
+                                  <li><a id="logout" href="cierre.php"><i class="fas fa-lock" style='font-size:16px; position: inherit;'></i> Cerrar Sesión</a></li>
+                              </ul>
+                            </li>
+                              <!--Menu despues del ingreso como usuario registrado--> 
+                                <span id=mone>
+                                   <!--Menu -> Historias Laborales (HL)--> 
+                                    <li><a  href="#"><i class="fas fa-folder-open fa" style="padding: 3px;"></i>HISTORIA LABORAL</a>
+                                        <ul class="sub-menu">
+                                           <!--Menu -> Historias Laborales (HL) -> Consulta-->
+                                              <li><a href="#"><i class="fas fa-search" style="padding: 3px;"></i>Consultar</a>
+                                                <ul>
+                                                  <li id="h1"><a href="#">Cedula</a></li>
+                                                  <li id="h0"><a href="#">Nombre</a></li>
+                                                  </ul>
+                                              </li>
+                                                <!--Menu -> Historias Laborales (HL) -> Actualiza-->
+                                                    <li id="h2"><a href="#"><i class="fas fa-redo" style="padding: 3px;"></i>Actualizar</a></li>
+                                                      <!--Menu -> Historias Laborales (HL) -> Registra-->
+                                                        <li id="h3"><a href="#"><i class="fas fa-edit" style="padding: 3px;"></i>Registrar</a>
+                                                          <!--Menu -> Historias Laborales (HL) -> Registra -> Submenu -->
+                                                            <ul>
+                                                              <!--Menu -> Historias Laborales (HL) -> Registra -> Submenu -> Datos-->
+                                                                  <li><a id="datos" href="#seven">Datos</a></li>
+                                                                    <!--Menu -> Historias Laborales (HL) -> Registra -> Submenu -> Ubicación-->
+                                                                        <li><a id="ubicacion" >Ubicación Fisíca</a></li>
+                                                                          <!--Menu -> Historias Laborales (HL) -> Registra -> Submenu -> Imagen-->
+                                                                              <li><a id="digitalizar" >Imagen</a></li>
+                                                                                <!--Menu -> Historias Laborales (HL) -> Registra -> Submenu -> Imprime-->
+                                                                                    <li><a id="imprimir">Imprimir Caratula</a></li>
+                                                            </ul>
+                                                        </li>
+                                        </ul>
+                                    </li>
+                                      <!--Menu -> Prestamos--> 
+                                        <li><a  href="#"><i class='fas fa-mail-bulk'></i> PRESTAMOS</a>
+                                          <ul class="sub-menu">
+                                            <!--Menu -> Prestamos -> Solicita Prestamo--> 
+                                              <li><a id="solicitapre"><i class="fas fa-file-export" style='font-size:16px; position: inherit;'></i> Solicitar</a></li>
+                                                <!--Menu -> Prestamos -> Devuelve Prestamo--> 
+                                                  <li ><a id="devuelvepre"><i class="fas fa-file-import" style='font-size:16px; position: inherit;'></i> Devolver</a></li>
+                                          </ul>
+                                        </li>
+                                          <!--Menu -> Transferenia-->
+                                            <li><a  href="#"><i class="fas fa-random" style="padding: 3px;"></i> TRANFERENCIA</a>
+                                              <ul class="sub-menu">
+                                                <!--Menu -> Prestamos -> Tranfiere-->  
+                                                  <li><a id="transfiere"><i class="fas fa-file-upload" style='font-size:16px; position: inherit;'></i> Transferir</a></li>
+                                                    <!--Menu -> Prestamos -> Consulta las tranferecias-->  
+                                                      <li><a id="consultatransfiere"><i class="fas fa-search" style='font-size:16px; position: inherit;'> </i>Consultar</a></li>
+                                              </ul>
+                                            </li>
+                                              <!--Menu -> Libros-->
+                                                <li><a  href="#"><i class="fas fa-book" style="padding: 3px;"></i> LIBROS CONTABLES</a>
+                                                  <ul class="sub-menu">
+                                                    <li><a href="#"><i class="fas fa-edit" style="padding: 3px;"></i>Comprobantes Egreso</a>
+                                                    <ul>
+                                                    <li><a href="#">Consultar</a></li>
+                                                    <li id="h5"><a href="#">Registrar</a></li>
+                                                    </ul>
+                                                  </li>
+                                                  </ul>
+                                                </li>
+                                </span>   
+                                  <!--Menu -> Contacto-->     
+                                    <li><a id="contacto" href="#"><i class="fa fa-envelope"></i> CONTACTO</a></li>
+                </ul>
+                 <!--Consulta HL para imprimir-->
+                 <form>
+                  <div id="consultaname" class="consultaname">
+                    <span>Ingrese el Nombre a Consultar
+                  <div class="input_container">
+                    <input autocomplete="off" type="text" id="pais_id" onkeyup="autocompletar()" class="ipcname" style="text-align: center;" name="consulta" placeholder="Enter Name" required >
+                      <ul id="lista_id"></ul>
+                  </div>
+                </div>
+              </form>  
+                 <div id="consultaimprimir" class="consultaimprimir">
+                  <span>Ingrese la identificación
+                    <h5>Imprimir Caratula</h5>
+                      <form  action="#" id="fmimprimir" >
+                        <input class="ipcimprimir" style="text-align: center;" name="consultaimp" placeholder="Identificación" required >
+                          <input type="submit" class="botonconsultaimprimir" value="Consultar"/>
+                      </form>
+                  </span>
+              </div>
+            <!--Consulta HL-->
+                <div id="consulta" class="consulta">
+                  <span>Ingrese la identificación
+                    <h5>Buscar</h5>
+                      <form  action="#" id="fm1" >
+                        <input class="ipc" style="text-align: center;" name="consulta" placeholder="Identificación" required >
+                          <input type="submit" class="botonconsulta" value="Consultar"/>
+                      </form>
+                  </span>
+              </div>
+            <!--Consulta HL para Actualizar-->
+              <div id="consulta2" class="consulta2">
+                <span>Ingrese la identificación
+                  <h5>Actualizar</h5>
+                    <form  action="#" id="fm2" >
+                      <input class="ipc" style="text-align: center;" name="consulta" placeholder="Identificación" required >
+                        <input type="submit" class="botonconsulta2" value="Consultar"/>
+                    </form>
+                </span>
+            </div>
+            <!--Consulta HL para solicitar Prestamo-->
+              <div id="consulta3" class="consulta3">
+                <span>Ingrese la identificación
+                  <h5>Prestamo Documental</h5>
+                    <form  action="#" id="fm7" >
+                      <input class="ipc3" style="text-align: center;" name="consultap" placeholder="Identificación" required >
+                        <input type="submit" class="botonconsulta3" value="Consultar"/>
+                    </form>
+                </span>
+            </div>
+            <!--Consulta HL para devolver Prestamo-->
+              <div id="consulta4" class="consulta4">
+                <span>Ingrese la identificación
+                  <h5>Devolución Documental</h5>
+                  <form  action="#" id="fm9" action="" enctype="multipart/form-data">
+                      <input class="ipc4" style="text-align: center;" name="ipc4" placeholder="Identificación" required >
+                        <input type="submit" class="botonconsulta4" value="Devolver"/>
+                    </form>
+                </span>
+            </div>
+            <!--Consulta HL para transferirrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr-->
+            <div id="consulta5" class="consulta5">
+              <br>
+              <span>Ingrese la identificación
+                <h5>Transferencia Documental</h5>
+                <form  action="#" id="fm10" action="" enctype="multipart/form-data">
+                  <input id="rtauser3" name="rtauser3" readonly>
+                    <input id="idtranfer" class="ipc5" style="text-align: center;" name="ipc5" placeholder="Identificación" required >
+                    <br>
+                    <h5>Seleccione el Tipo Documental</h5>
+                    <div id="principal" class="principal">
+                    <span class="secundario" id="sptc">Tipo Documental:
+                      <select name="tipodoc"  type="text" id="tipodoc" required > 
+                        <option value="Seleccionar">Seleccionar...</option>
+                        <option value="ACTAS">ACTAS</option>
+                        <option value="CARTAS">CARTAS</option>
+                        <option value="CERTIFICADOS">CERTIFICADOS</option>
+                        <option value="COMPARENDOS">COMPARENDOS</option>
+                        <option value="COMUNICACIONES">COMUNICACIONES</option>
+			<option value="EVALUACIONES">EVALUACIONES</option>
+                        <option value="INCAPACIDADES">INCAPACIDADES</option>
+                        <option value="INFORMES">INFORMES</option>
+                        <option value="LICENCIAS">LICENCIAS</option>
+                        <option value="LIQUIDACION">LIQUIDACION</option>
+                        <option value="PERMISOS">PERMISOS</option>
+                        <option value="PLANILLAS">PLANILLAS</option>
+			<option value="PRESTAMOS">PRESTAMOS</option>
+                        <option value="REPORTES">REPORTES</option>
+                        <option value="RESPUESTA">RESPUESTA</option>
+                        <option value="VACACIONES">VACACIONES</option>
+                      </select></span>
+                      <input type="number" min="0" id ="folios" class="secundario" style="text-align: center;" name="Folios" placeholder="Folios" required >
+                    </div>
+                      <h5>Breve Descripcion Documental</h5>
+                      <textarea class= "textarea" name="textarea" rows="3" cols="30" placeholder ="Descripción"></textarea>
+                      <br>
+                      <input type="submit" class="botontransfer" value="Transferir"/>
+                  </form>
+              </span>
+          </div>
+            
+        </nav>
+        <section class="nottranfer" id="nottranfer">
+          <div class="containernottranfer" id="containernottranfer">
+           Estado de las tranferencias
+          </div>
+        
+        </section>
+          <!--Formulario Login-->
+            <div id="container" class="containerlogin">
+              <h1 id="iniciar">Iniciar Sesión</h1>
+              <div id="bProgreso">
+                <div id="barra"></div>
+              </div>
+                <i id="cconta"class="fa fa-times"></i>
+                  <form  action="#" id="fm" >
+                    <input id="inp1" name="Usuario" placeholder="Usuario" required >
+                      <input id="inp2" type="password" name="pass" placeholder="Contraseña" required >
+                        <input type="submit" class="botonlg" value="Iniciar Sesión"/>
+                            <div id="remember-container">
+                                <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked"/>                              
+                                  <span id="remember">Recordarme</span>                              
+                          </div>
+                  </form>
+          </div>
+          
+            <div class="pimg1">
+              <div class="ptext">
+                <span class="border">
+                GESTIÓN DOCUMENTAL
+                </span>
+              </div>
+          </div>
+        <span id="nospan">
+        <section id="one" class="section section-light">
+          <h1>Diferencia entre Archivo y Gestión Documental</h1>
+          <br>
+          <h2>¿ Que es Gestión Documental ?</h2>
+          <br>
+          <p>
+            Conjunto de actividades administrativas y técnicas, tendientes a la
+            planificación, manejo y organización de la documentación producida y recibida por las entidades,
+            desde su origen hasta su destino final con el objeto de facilitar su utilización y conservación.
+          </p>
+          <br>
+          <h2>¿ Que es Archivo ?</h2>
+          <br>
+          <p>
+            Conjunto de documentos, sea cual fuere su fecha, forma y soporte material, acumulados
+            en un proceso natural por una persona o entidad pública o privada, en el transcurso de su gestión,
+            conservados respetando aquel orden para servir como testimonio e información a la persona o
+            institución que los produce y a los ciudadanos, o como fuentes de la historia.
+            También se puede entender como la institución que ésta al servicio de la gestión administrativa, la
+            información, la investigación y la cultura. 
+          </p>
+          <br>
+          <h2>Conoce más Terminología Archivística</h2>
+          <button id="myBtn">Conocer Más</button>
+
+            <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>GLOSARIO DE TÉRMINOS ARCHIVÍSTICOS</h2>
+                  <span class="close">X</span>
+                </div>
+                <div class="modal-body">
+                  <div class="diframe">
+                    <iframe src="Imagenes/terminos.pdf" frameborder="10" ></iframe>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+        </section>
+        <div class="pimg2">
+          <div class="ptext">
+            <span class="border">
+             PROGRAMA DE GESTIÓN DOCUMENTAL
+            </span>
+          </div>
+        </div>
+      
+        <section id="two" class="section section-dark">
+          <h2>PGD SERVIASEO S.A.</h2>
+          <br>
+          <p>
+            <b>El Programa de Gestión Documental – PGD</b>, es el Conjunto de actividades administrativas y técnicas, tendientes a la planificación, manejo y organización de la documentación producida y recibida por la compañía, desde su origen hasta su disposición final, con el fin de facilitar su uso y conservación, a su vez, especifica las operaciones para el desarrollo de los procesos de la gestión documental al interior de la compañía. 
+            Estos procesos son: producción, recepción, distribución, trámite, organización, consulta y disposición final.
+            <br>
+            <b>SERVIASEO S.A</b>, debe dar cumplimiento a la Ley 594 de 2000 “Ley General de Archivos”, por medio de una adecuada cultura archivística, aplicando el Modelo del Programa de Gestión Documental PGD, como aporte al fortalecimiento del Sistema Integrado de Planeación y Gestión - SIPLAG.
+            <br>
+            De acuerdo a los lineamientos del Archivo General de la Nación – AGN, y en cumplimiento al Decreto 2609 de 2012 “Por el cual se reglamenta el Título V de la Ley 594 de 2000, parcialmente los artículos 58 y 59 de la Ley 1437 de 2011 “Código de Procedimiento Administrativo y del Contencioso Administrativo” y se dictan otras disposiciones en materia de Gestión Documental para todas las Entidades públicas y privadas", Serviaseo ha elaborado el presente Programa de Gestión Documental – PGD, para el desarrollo de las actividades aquí registradas, realizando el seguimiento oportuno a los planes y programas específicos que lo integran.
+            Con este instrumento se pretende orientar a la Compañía <b>SERVIASEO S.A.</b> en su implementación, resaltando la importancia de los documentos y archivos, que contribuyen a la memoria de la Compañía.
+          </p>
+        </section>
+      
+        <div class="pimg3">
+          <div class="ptext">
+            <span class="border">
+             DIGITALIZACIÓN DOCUMENTAL
+            </span>
+          </div>
+        </div>
+      
+        <section id="three" class="section section-dark">
+          <h2>¿Qué es la Digitalización de Documentos?</h2>
+          <br>
+          <p>
+            La digitalización de documentos es uno de los procesos más importantes dentro del desarrollo de la gestión documental, en el que se lleva a cabo la transformación de los formatos de todo lo concerniente a los documentos físicos que se manejan al interior de la empresa.
+            <br>
+            Es decir,<i>después de la debida revisión, se seleccionan los documentos físicos (análogos) y se pasan a un formato binario (digital)</i>. La realización de este proceso ayuda a la empresa a mantener los archivos de importancia en las mejores condiciones a través del tiempo. De igual modo la digitalización ayuda a realizar la administración de una manera más eficiente, ya que se reducen los tiempos de búsqueda, clasificación y acceso.
+          </p>
+          <br>
+          <h2>Formas de digitalizar la información</h2>
+          <br>
+          <p>
+            Cuando se piensa en digitalizar sus documentos, es posible que la primera idea que nos venga a la mente sea la cantidad de tiempo que se necesita para escanear a mano múltiples documentos. Pero afortunadamente, este proceso ha cambiado en cuanto a la forma: existen escáneres con una gran potencia que permiten aumentar el número de páginas por minuto, o bien, el proceso se puede subcontratar.
+            <br>
+            Al comenzar con el proceso, será necesario determinar si es mejor adquirir los medios necesarios para realizarlo con recursos propios (compra de escáneres y otros materiales necesarios) o subcontratar el servicio. Esto dependerá de las necesidades de la empresa: la cantidad de documentación a digitalizar, la disponibilidad de recursos existentes, tener personal disponible para su realización o no, etc.
+            <br>
+            Si se hace de forma manual, es decir, la propia empresa escanea los documentos, existen softwares específicos que permiten la digitalización de documentos. Hay programas gratuitos si la información a digitalizar es muy baja; o de pago, si se busca realizar de forma más profesional. Por otro lado, también está la opción de implementar un gestor documental con el módulo de captura o digitalización de documentos. Existen dos tipos de gestores, por un lado, los específicos para digitalizar documentos y por otro, los gestores documentales más generales.
+            <br>
+            Los gestores documentales centrados en digitalizar documentos suelen proceder de empresas fabricantes de maquinaria de impresión o digitalización como Canon o Kodak. Hay ocasiones en las que el software se ofrece al comprar la máquina o, por otro lado, se puede comprar el software al tener la máquina con anterioridad.
+          </p>
+        </section>
+
+        <div class="pimg4">
+          <div class="ptext">
+            <span class="border">
+             LEGISLACIÓN DOCUMENTAL
+            </span>
+          </div>
+        </div>
+      
+        <section id="four" class="section section-dark">
+          <h2>¿Qué es la Legislación Documental?</h2>
+          <br>
+          <p>
+            Se manejan unas leyes acorde a cada necesidad de salvaguardar la Documentación en una empresa y al mismo tiempo dar respuesta a las diferentes oficinas y personas que lo necesiten para la toma de decisiones. Ley 594 de 2000. 
+            <br>
+            Para que el Programa de Gestión Documental (PGD) pueda ser gestionado de manera apropiada y segura, es necesario que la entidad responda y cumpla con las diferentes normas proferidas por la entidad, por el Archivo General de la Nación así como las demás normas aplicables a la entidad. A continuación señalamos normas de carácter general relacionadas con el Programa de Gestión Documental (PGD):
+          </p>
+          <span><a   id= "sn" class="sn">Ver Más</a></span>
+          <div id="asi1" class="gallery">
+            <!-- karta 1-->
+            <div class="card" >
+              <div class="box front">
+                <h1>LEYES</h1>
+                <br>
+                <i class='far fa-hand-point-left' style='font-size:36px'></i>
+              </div>
+              <div class="box back">
+                <li ><a href="https://dapre.presidencia.gov.co/normativa/normativa/ley-594-14-julio-2000.pdf" target="_blank">LEY 594 DE 2000.</a></li>
+                <li><a href="https://www.mineducacion.gov.co/1621/articles-103905_archivo_pdf.pdf" target="_blank">LEY 23 DE 1981.</a></li>
+                <li><a href="https://www.docudigital.com/wp-content/uploads/2016/11/LEY_80_DE_1989.pdf" target="_blank">LEY 80 DE 1989.</a></li>
+                <li><a href="https://bibliotecadigital.ccb.org.co/bitstream/handle/11520/13635/Ley%20527%20de%201999.pdf?sequence=1&isAllowed=y" target="_blank">LEY 527 DE 1999.</a></li>
+              </div>
+            </div>
+            <!-- karta 2-->
+            <div class="card">
+              <div class="box front"><h1>ACUERDOS</h1>
+                <br>
+                <i class='far fa-hand-point-left' style='font-size:36px'></i>
+              </div>
+              <div class="box back">
+                <li><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=10533" target="_blank">ACUERDO 037 DE SEPTIEMBRE 20 DE 2002.</a></li>
+                <li><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=6351" target="_blank">ACUERDO 039 DE OCTUBRE 31 DE 2002.</a></li>
+                <li><a href="https://colaboracion.dnp.gov.co/CDT/Normograma/Acuerdo%2041%20de%202002.pdf" target="_blank">ACUERDO 041 DE OCTUBRE 31 DE 2002.</a></li>
+                <li><a href="http://gestiondocumental.manizales.unal.edu.co/fileadmin/user_upload/acuerdo_042.pdf" target="_blank">ACUERDO 042 DE OCTUBRE 31 DE 2002.</a></li>
+                <li><a href="https://colaboracion.dnp.gov.co/CDT/Normograma/Acuerdo%20AGN%20048%20de%202000.pdf" target="_blank">ACUERDO 48 DE MAYO 5 DE 2000.</a></li>
+                <li><a href="https://docplayer.es/5434355-Acuerdo-no-049-5-de-mayo-de-2000.html" target="_blank">ACUERDO 049 DE MAYO 5 DE 2000.</a></li>
+                <li><a href="http://media.utp.edu.co/gestion-documentos/archivos/Acuerdo_050-2000.pdf" target="_blank">ACUERDO 050 DE MAYO 5 DE 2000.</a></li>
+                <li><a href="https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=10549" target="_blank">ACUERDO 056 DE JUNIO 5 DE 2000.</a></li>
+                <li><a href="https://www.defensoria.gov.co/public/Normograma%202013_html/Normas/Acuerdo_060_2001.pdf" target="_blank">ACUERDO 060 DE OCTUBRE 30 DE 2001.</a></li>
+              </div>
+            </div>
+            <!-- karta 3-->
+            <div class="card">
+              <div class="box front"><h1>CIRCULARES</h1>
+                <br>
+                <i class='far fa-hand-point-left' style='font-size:36px'></i>
+              </div>
+              <div class="box back">
+                <li><a href="https://www.cvc.gov.co/sites/default/files/Sistema_Gestion_de_Calidad/Procesos%20y%20procedimientos%20Vigente/Normatividad_Gnl/Circular%2001%20de%201997.pdf" target="_blank">CIRCULAR 01 DE 1997</a></li>
+                <li><a href="https://www.redjurista.com/Documents/circular_2_de_1997.aspx#/" target="_blank">CIRCULAR 2 DE 1997</a></li>
+                <li><a href="https://www.usco.edu.co/archivosUsuarios/12/archivo_central/NORMATIVIDAD/22.%20Circular%20del%20AGN%20004%20de%202003%20Historias%20Laborales.pdf" target="_blank">CIRCULAR 004 DE 2003</a></li>
+                <li><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=10633" target="_blank">CIRCULAR EXTERNA 001 DE 2001</a></li>
+                <li><a href="https://www.icfe.gov.co/portal/encrypt/Paginas/Leyes_ordenanzas_y_acuerdos/Circulares/circular_001_de_2003.pdf" target="_blank">CIRCULAR EXTERNA 01 DE 2003</a></li>
+                <li><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=61824" target="_blank">CIRCULAR EXTERNA 004 DE 2010</a></li>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <div class="pimg1">
+          <div class="ptext">
+            <span class="border" id="gesdoc">
+              <span data-tooltip="Conoce Nuestro Mapa de Procesos haciendo Clic aqui ↓↓↓" id="tooltip">
+              GESDOC
+            </span>
+            </span>
+            <div id="myModalcircular" class="modalcircular">
+
+              <!-- Modal 1 -->
+              <div class="modal-contentcircular">
+                <span class="closecircular">&times;</span>
+                <h5 style="text-align: justify;">
+                  <p style="text-align: center; font-weight: bolder;">Organización Documental</p>
+                  <hr class="hr1">
+                  Los archivos de gestión se organizan de acuerdo a las TRD, teniendo en cuenta
+                  las series, subseries y el orden cronológico de los documentos. El almacenamiento
+                  se hace en carpetas de 4 aletas para evitar la perforación y coser los documentos.
+                </h5>
+              </div>
+            </div>
+            <!-- Modal 2 -->
+            <div id="myModalcircular2" class="modalcircular2">
+            <div class="modal-contentcircular2">
+              <span class="closecircular2">&times;</span>
+              <h5 style="text-align: justify;">
+                <p style="text-align: center; font-weight: bolder;">Planeación Documental</p>
+                <hr class="hr2">
+                Actividades encaminadas a la planeación, generación y valoración de los documentos de la entidad, 
+                en cumplimiento con el contexto administrativo, legal, funcional y técnico, comprende la creación 
+                y diseño de formas, formularios y documentos, análisis de procesos, análisis diplomático y su registro 
+                en el sistema de gestión documental.
+              </h5>
+            </div>
+            </div>
+             <!-- Modal 3 -->
+             <div id="myModalcircular3" class="modalcircular3">
+             <div class="modal-contentcircular3">
+              <span class="closecircular3">&times;</span>
+              <h5 style="text-align: justify;">
+                <p style="text-align: center; font-weight: bolder;">Valoración Documental</p>
+                <hr class="hr3">
+                Proceso permanente y continuo, que inicia desde planificación de los documentos 
+                y por medio del cual se determinan los valores primarios y secundarios de los 
+                documentos, con el fin establecer su permanencia en las diferentes fases de archivo 
+                y determinar su disposición final (conservación temporal o permanente).
+              </h5>
+            </div>
+            </div>
+             <!-- Modal 4 -->
+             <div id="myModalcircular4" class="modalcircular4">
+             <div class="modal-contentcircular4">
+              <span class="closecircular4">&times;</span>
+              <h5 style="text-align: justify;">
+                <p style="text-align: center; font-weight: bolder;">Disposición de Documentos</p>
+                <hr class="hr4">
+                Se atienden todas las solicitudes de préstamos documentales, diligenciando el formato de acuerdo al 
+                Sistema de Gestion de Calidad.
+              </h5>
+            </div>
+             </div>
+             <!-- Modal 5 -->
+             <div id="myModalcircular5" class="modalcircular5">
+             <div class="modal-contentcircular5">
+              <span class="closecircular5">&times;</span>
+              <h5 style="text-align: justify;">
+                <p style="text-align: center; font-weight: bolder;">Preservación Documental a Largo Plazo </p>
+                <hr class="hr5">
+                Los Documentos se encuentran en custodia en el Archivo Central en sus respectivos estrantes, almacenando en cajas X-300,
+                las cuales conservan carpetas, rotuladas e identificadas.
+              </h5>
+            </div>
+             </div>
+             <!-- Modal 6 -->
+             <div id="myModalcircular6" class="modalcircular6">
+             <div class="modal-contentcircular6">
+              <span class="closecircular6">&times;</span>
+              <h5 style="text-align: justify;">
+                <p style="text-align: center; font-weight: bolder;">Transferencia Documental</p>
+                <hr class="hr6">
+                Al comienzo del año las dependencias o areas transfieren los documentos que han
+                cumplido su ciclo en el archivo de gestión. En el archivo central se revisan que esten 
+                de acuerdo a las TRD y se procede a orgarnizarlos en la estanteria e ingresar en la base
+                de datos. 
+              </h5>
+            </div>
+             </div>
+             <!-- Modal 7 -->
+             <div id="myModalcircular7" class="modalcircular7">
+             <div class="modal-contentcircular7">
+              <span class="closecircular7">&times;</span>
+              <h5 style="text-align: justify;">
+                <p style="text-align: center; font-weight: bolder;">Producción Documental</p>
+                <hr class="hr7">
+                Cada dependencia o area, produce documentos de acuerdo a los
+                parametros establecidos por el sistema de gestión de calidad.
+              </h5>
+            </div>
+             </div>
+             <!-- Modal 8 -->
+             <div id="myModalcircular8" class="modalcircular8">
+             <div class="modal-contentcircular8">
+              <span class="closecircular8">&times;</span>
+              <h5 style="text-align: justify;">
+                <p style="text-align: center; font-weight: bolder;">Gestión y Tramite Documental</p>
+                <hr class="hr8">
+                Se realiza la Recepción, Distribución y Tramite de registros internos 
+                de la compañia. 
+              </h5>
+            </div>
+             </div>
+            <nav class="menu-circular">
+              <div class="circular">
+                <span class="mp">MAPA DE PROCESOS</span>
+                <a id="myBtncircular">
+                  <span id="circulospan1" class="circulospan1">
+                    <span id="circulospan1-1" class="circulospan1-1">Organización</span>
+                  </span>
+                  <div id="icirculospan1" class="icirculospan1">
+                  <i class="fas fa-cogs"> </i>               
+                  </div>
+                  </a>
+                <a id="myBtncircular2">
+                  <span id="circulospan2" class="circulospan2"><span class="circulospan1-2">Planeación</span></span>
+                  <div class="icirculospan2">
+                  <i class='fas fa-chart-line'>
+                </i>
+              </div>
+              </a>
+                <a id="myBtncircular3">
+                  <span id="circulospan3" class="circulospan3"><span class="circulospan1-3">Valoración</span></span>
+                  <div class="icirculospan3">
+                  <i class='fas fa-tasks' >
+                </i>
+              </div>
+            </a>
+                <a id="myBtncircular4">
+                  <span id="circulospan4" class="circulospan4"><span class="circulospan1-4">Disposición</span></span>
+                  <div class="icirculospan4">
+                  <i class="fas fa-hands">
+                </i>
+              </div>
+              </a>
+                <a id="myBtncircular5">
+                  <span id="circulospan5" class="circulospan5"><span class="circulospan1-5">Preservación</span></span>
+                  <div class="icirculospan5">
+                  <i class="fas fa-hand-holding">
+                </i>
+              </div>
+              </a>
+                <a id="myBtncircular6">
+                  <span id="circulospan6" class="circulospan6"><span class="circulospan1-6">Transferencia</span></span>
+                  <div class="icirculospan6">
+                  <i class="fas fa-exchange-alt">
+                </i>
+              </div>
+              </a>
+                <a id="myBtncircular7">
+                  <span id="circulospan7" class="circulospan7"><span class="circulospan1-7">Producción</span></span>
+                  <div class="icirculospan7">
+                  <i class="fas fa-file-signature">
+                </i>
+              </div>
+              </a>
+                <a id="myBtncircular8">
+                  <span id="circulospan8" class="circulospan8"><span class="circulospan1-8">Gestión</span></span>
+                  <div class="icirculospan8">
+                  <i class="fas fa-file-import">
+                </i>
+              </div>
+              </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </span>
+      
+      <section id="five" class="section section-light">
+        <h1>Datos Historia Laboral</h1>
+        <br>
+        <div class="resp-a">
+          <h4>Datos Personales</h4>
+          <span>Nombre Completo:
+            <label name="Nombre" id="Nombre">.....</label></span>
+            <br>
+              <span>Identificación:
+                <label name="Identificacion" id="Id">.....</label></span>
+                <br>
+                <span>Causa de Retiro:
+                  <label name="Causa" id="Causa">.....</label></span>
+                  <br>
+                  <span>Cargo:
+                    <label name="Cargo" id="Cargo">.....</label></span>
+                    <br>
+                    <span>Fecha Inicial:
+                      <label name="Inicial" id="Inicial">.....</label></span>
+                      <br>
+                      <span>Fecha Final:
+                        <label name="Final" id="Final">.....</label></span>
+                        <br>
+        </div>  
+        <div class="resp-b">
+          <h4>Ubicación Topografica</h4>
+          <span>Caja:
+            <label name="Caja" id="Caja">.....</label></span>
+            <br>
+              <span>Consecutivo Caja:
+                <label name="Consecutivo" id="Consecutivo">.....</label></span>
+                <br>
+                <span>Carpeta:
+                  <label name="Carpeta" id="Carpeta">.....</label></span>
+                  <br>
+                  <span>Tomo:
+                    <label name="Tomo" id="Tomo">.....</label></span>
+                    <br>
+                    <span>Estante:
+                      <label name="Estante" id="Estante">.....</label></span>
+                      <br>
+                      <span>Estado:
+                        <label name="Estado" id="Estado">.....</label></span>
+                        <br>
+        </div>        
+        <div class="resp-c">
+          <img id="imgper" src=""class="box-img">
+          <br>
+          <span class="ocultamenuliop">Imagenes</span>
+          <div id= "menuliop">
+          <ul id="menu" class="menuliop">
+          
+          </ul>
+        </div>
+         </div>  
+         <div class="resp-d">
+          <h4>Contrato Actual</h4>
+          <span>Estado:
+            <label name="Estado" id="Estadocontrato">.....</label></span>
+            <br>
+              <span>Fecha Inicial:
+                <label name="FechaInical" id="FechaInical">.....</label></span>
+                <br>
+                <span>Fecha Final:
+                  <label name="FechaFinal" id="FechaFinal">.....</label></span>
+        </div>           
+      </section>
+
+      <section id="six" class="section section-light">
+        <h1>Actualizar Datos Historia Laboral</h1>
+        
+        <br>
+    <form  action="#" id="fm3" >
+      <input type="submit" id="botonactualiza" class="botonactualiza" value="Actualizar"/>
+      <div class="respsix">
+        <div class="resp-a">
+          <h4>Datos Personales</h4>
+          <span>Nombre Completo:
+            <input name="Nombre2" type="text" id="Nombre2" ></input></span>
+            <br>
+              <span>Identificación:
+                <input name="Id2" type="text" id="Id2" readonly></input></span>
+                <br>
+                <span>Causa de Retiro:
+                  <input name="Causa2" type="text" id="Causa2"></input></span>
+                  <br>
+                  <span>Cargo:
+                    <input name="Cargo2" type="text"id="Cargo2"></input></span>
+                    <br>
+                    <span>Fecha Inicial:
+                      <input name="Inicial2" type="text" id="Inicial2" readonly></input></span>
+                      <br>
+                      <span>Fecha Final:
+                        <input name="Final2" type="text" id="Final2"></input></span>
+                        <br>
+        </div>  
+        <div class="resp-b">
+          <h4>Ubicación Topografica</h4>
+          <span>Caja:
+            <input name="Caja2" type="text" id="Caja2"></input></span>
+            <br>
+              <span>Consecutivo Caja:
+                <input name="Consecutivo2" type="text" id="Consecutivo2"></input></span>
+                <br>
+                <span>Carpeta:
+                  <input name="Carpeta2" type="text" id="Carpeta2"></input></span>
+                  <br>
+                  <span>Tomo:
+                    <input name="Tomo2" type="text" id="Tomo2"></input></span>
+                    <br>
+                    <span>Estante:
+                      <input name="Estante2" type="text" id="Estante2"></input></span>
+                      <br>
+                      <span>Estado:
+                        <input name="Estado2" type="text" id="Estado2"></input></span>
+                        <br>
+        </div> 
+        <div class="resp-c" id= "resp-c">
+          <br>
+          <br>
+          <img id="imgper2" src="" alt="" class="box-img2">
+          <br>
+          <h4>Fecha Ultimo Contrato</h4>
+          <div class="Divultimocontrato">
+          <span>Fecha Inicial</span>
+            <input type="date" name="fechainicialcontrato" type="text" id="fechainicialcontrato"></input>
+            <br>
+            <span>Fecha Final</span>
+            <input type="date" name="fechafinalcontrato" type="text" id="fechafinalcontrato"></input>
+            <br>   
+          </div>
+          <br>
+          <a onclick='EscanNAPS2()' class="custom-btn btn-1"><span>Click!</span><span>Digitalizar</span></a>
+          <br>
+          <br>
+          <h4>Cargar Archivo</h4>
+          <div class="custom-input-file col-md-6 col-sm-6 col-xs-6">
+            <input id="image2" name="image2" type="file" class="input-file" accept=".pdf" value="" ><i class="fa fa-upload fa-2x" aria-hidden="true"></i>
+            </div>
+          <span>Tipo Documental
+           <input type="date" id="start" name="trip-start">
+            <select name="Tipodoc" type="text" id="Tipodoc" required > 
+              <option value="Seleccionar">Seleccionar...</option>
+              <option value="ACTAS">ACTAS</option>
+              <option value="CARTAS">CARTAS</option>
+              <option value="CERTIFICADOS">CERTIFICADOS</option>
+              <option value="CONTRATO">CONTRATO</option>
+              <option value="COMPARENDOS">COMPARENDOS</option>
+              <option value="COMUNICACIONES">COMUNICACIONES</option>
+			  <option value="EVALUACION">EVALUACION</option>
+              <option value="INCAPACIDADES">INCAPACIDADES</option>
+              <option value="INFORMES">INFORMES</option>
+              <option value="LICENCIAS">LICENCIAS</option>
+              <option value="LIQUIDACION">LIQUIDACION</option>
+              <option value="PERMISOS">PERMISOS</option>
+              <option value="PLANILLAS">PLANILLAS</option>
+			  <option value="PRESTAMOS">PRESTAMOS</option>
+              <option value="REPORTES">REPORTES</option>
+              <option value="RESPUESTA">RESPUESTA</option>
+              <option value="SOLICITUD">SOLICITUD</option>
+              <option value="SOPORTES">SOPORTES</option>
+              <option value="VACACIONES">VACACIONES</option>
+            </select>
+            
+      </form>  
+         </div> 
+        </div>       
+      </section>
+      
+      <section id="seven" class="section section-dark">
+        <h1>Registrar Historia Laboral</h1>
+        <form  action="#" id="fm4" action="" enctype="multipart/form-data">
+        <input type="submit" id="botonregistro" class="botonregistro" value="Registrar"/>
+        <div class="row">
+          <div class="column">
+            <div class="card1" id="card1">
+           
+              <h3>Datos Personales</h3>
+          <span>Nombre Completo:
+            <input name="Nombre3" type="text" id="Nombre3" required ></input></span>
+            <br>
+              <span>Identificación:
+                <input name="Id3" type="number" id="Id3" required ></input></span>
+                <br>
+                <section>
+                  <!-- Slide THREE -->
+                  <span>Labora Actualmente?</span>
+                  <div id="divslideThree" class="slideThree">	
+                    <input type="checkbox" value="None" id="slideThree" name="check" checked />
+                    <label for="slideThree"></label>
+                  </div>
+                </section>
+              <br>
+                <span>Causa de Retiro:
+                  <input name="Causa3" type="text" id="Causa3" required ></input></span>
+                  <br>
+                  <span>Cargo:
+                    <input name="Cargo3" type="text" id="Cargo3" required ></input></span>
+                    <br>
+                    <span>Fecha Inicial:
+                      <input name="Inicial3" type="date" id="Inicial3" required ></input></span>
+                      <br>
+                      <span>Fecha Final:
+                        <input name="Final3" type="text" id="Final3" required ></input></span>
+                        <br>
+            </div>
+          </div>
+        
+          <div class="column" >
+            <div class="card1" id="card2">
+              <h3>Ubicación Topografica</h3>
+              <span>Caja:
+                <input name="Caja3" type="text" id="Caja3" required ></input></span>
+                <br>
+                <br>
+                  <span>Consecutivo Caja:
+                    <input name="Consecutivo3" type="text" id="Consecutivo3" required ></input></span>
+                    <br>
+                    <span>Carpeta:
+                      <input name="Carpeta3" type="text" id="Carpeta3" required readonly></input></span>
+                      <br>
+                      <span>Consecutivo de Tomo?</span>
+                      <div class="custom1">
+                        <div class="custom-checkbox1">
+                          <input class="custom-checkbox-input1" type="checkbox" id="custom-checkbox-discovery"/>
+                          <label class="custom-checkbox-label1" for="custom-checkbox-discovery">
+                            <label class="custom-checkbox-label-aux1" for="custom-checkbox-discovery">
+                          </label>
+                        </div>
+                    </div>
+                    <br>
+                      <span>Tomo:
+                        <input name="Tomo3" type="text" id="Tomo3" required ></input></span>
+                        <br>
+                        <span>Estante:
+                          <input name="Estante3" type="text" id="Estante3" required ></input></span>
+                          <br>
+
+                          <span>Estado:
+                            <select name="Estado3" type="text" id="select" required > 
+                              <option>Seleccionar...</option>
+                              <option value="ACTIVA">ACTIVA</option>
+                              <option value="INACTIVA">INACTIVA</option>
+                            </select>
+                          </span>
+                            
+                            <br>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card1" id="card3">
+              <h3>Imagen</h3>
+              <br>
+                      <span>Foto:
+                        <br>
+                        <img id="imag-reg" src="Imagenes/usuario.png" alt="" class="box-img1" width="400">
+                        <div class="custom-input-file col-md-6 col-sm-6 col-xs-6">
+                        <input type="file" name="image" id="i_file" class="input-file" accept="image/*"value="" ><i id="cam"class="fa fa-camera" aria-hidden="true"></i>
+                        </div>
+                        <br>
+                        <span id="ultimocontrato">
+                          <span>ULTIMO CONTRATO</span>
+                        <br>
+                        <br>
+                        <br>
+                        <span>Fecha Inicial:
+                          <input name="InicialActual" type="date" id="Inicial4" required ></input></span>
+                          <span>Fecha Final:
+                            <input name="FinalActual" type="date" id="Final4" required ></input></span>
+                          </span>
+                          <br>
+                          <br>
+                          <span>DOCUMENTOS CONTRACTUALES</span>
+                          <div class="padre2">
+                            <div class="hijo2"><input type="checkbox">Formato Hoja de Vida</div>
+                            <div class="hijo2"><input type="checkbox">Examenes Medicos</div>
+                            <div class="hijo2"><input type="checkbox">Capacitación SST</div>
+                            <div class="hijo2"><input type="checkbox">Contrato</div>
+                            <div class="hijo2"><input type="checkbox">Afiliación</div>
+                          </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      </section>
+     
+      <section id="nine" class="section section-dark" >
+      <form  action="#" id="fm8" action="" enctype="multipart/form-data">
+        <div class="containercar">
+          <input id="rtauser" name="rtauser" readonly>
+          <div class="cards card0" id="card0">
+            <div class="border">
+              <input name="Pnombre" id="Pnombre"></label></input>
+              <div class="icons">
+               <h3>Identificación
+                 <input name="Pid" id="Pid1" class="Pid1"></input>
+               </h3>
+               <label >Tipo de Prestamo</label>
+               <select name="tpres" id="Pid2" required>
+                 <option>--</option>
+                 <option  value="Definitivo">Definitivo</option>
+                 <option value="Temporal">Temporal</option>
+               </select>
+               <label>Area</label>
+               <select name="apres" id="Pid3" required>
+                <option>--</option>
+                <option value="Archivo">Archivo</option>
+                <option value="Aportes">Aportes</option>
+                <option value="Contabilidad">Contabilidad</option>
+                <option value="Gerencia">Gerencia</option>
+                <option value="Nivel Nacional">Nivel Nacional</option>
+                <option value="Nomina">Nomina</option>
+                <option value="Salud Ocupacional">Salud Ocupacional</option>
+                <option value="Recursos Humanos">Recursos Humanos</option>
+                
+              </select>
+              <input id="sol"type="submit" class="solicitar" value="Solicitar"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      </section>
+      <section class="shopping-cart">
+        <div id="containermsn" class="containermsn">
+          <div class="actualizarmensaje" id="actualizarmensaje"><i class="fas fa-sync fa-1x"></i></div>
+            <h1 class="text-center">Solicitudes!</h1>
+            <span id="await">Cargando...</span>
+            <span id="await4">Sin Mensajes</span>
+            <hr>
+          <form  action="#" id="fmp" action="" enctype="multipart/form-data">
+            <div class="row2" id="row2">  
+             
+            </div>
+            <div class="row3" id="row3">  
+               
+            </div>
+          </form>
+        </div>
+</section>
+<a href="javascript:myFunction7()" id="cart" class="cart">
+  <span id="totalItems">0</span>
+  <i class="fas fa-envelope fa-1x"></i></a>
+  <a href="javascript:myFunction8()" id="not" class="not">
+    <span id="totalItems2">0</span>
+    <i class="fas fa-bell" id="fa-bell"></i>
+  </a>
+  <section class="load" id="load">
+    <div class="containernotifi" id="containernotifi">
+      <form  action="#" id="fmrta" action="" enctype="multipart/form-data">
+        <input id="rtauser2" name="rtauser2" readonly>
+      <div class="actualizarnotifi" id="actualizarnotifi"><i id = "faactual" class="fas fa-sync fa-1x"></i></div>
+      
+    </form>
+      <h1>Notificaciones</h1>
+      <span id="await2">Cargando...</span>
+      <span id="await3">Sin Notificaciones</span>
+      <br>
+      <div class="col-12">
+        <div class="shopping" id="shopping" >
+        </div>
+        
+    </div>
+
+    </div>
+  
+  </section>
+  <div id="myModalcontacto" class="modalcontacto">
+
+    <!-- Modal Contacto -->
+    <div class="modal-contentcontacto">
+      <span class="closecontacto">&times;</span>
+      <div class="contentcontacto">
+        <h1 class="logocontacto">Contacto Soporte GesDoc</h1>
+        <div class="contact-wrapper">
+          <div class="contact-form">
+            <h3>Contacto</h3>
+            <form action="/">
+              <p>
+                <label for="fullname">Nombre Completo</label>
+                <input type="text" name="fullname" id="fullname">
+              </p>
+              <p>
+                <label for="email">Correo</label>
+                <input type="email" name="email" id="email">
+              </p>
+              <p>
+                <label for="phone">Telefono</label>
+                <input type="tel" name="phone" required >
+              </p>
+              <p>
+                <label for="extension">Extensión</label>
+                <input type="number" name="extension" required>
+              </p>
+              <p class="block">
+                <label for="message">Mensaje</label>
+                <textarea name="message" rows="3"></textarea>
+              </p>
+              <p class="block">
+                <button type="submit"><i class="fa fa-envelope"></i></button>
+              </p>
+            </form>
+          </div>
+          <div class="contact-info">
+            <img class="ico" id="ico" src="/Imagenes/ImagenSErv.ico" alt="">
+            <h4>Soporte Web</h4>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i>Carrera 54 # 17-71, Bogotá, Cundinamarca</li>
+              <li><i class="fas fa-phone"></i> 601-3352220 Ext 101</li>
+              <li><i class="fas fa-envelope-open-text"></i> SoporteWeb@Serviaseo.com</li>
+            </ul>
+            <p>
+              <i class="fab fa-internet-explorer"></i>
+              <a class = "aserviaseo" href="https://serviaseo.com/" target="_blank">www.serviaseo.com</a>
+            </p>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="containercolors" id="containercolors">
+    <!--Las siguentes instrucciones permiten crear la ruleta de colores-->
+     <!--ARRIBA-->
+    <div class="key" id="C4"></div>
+    <div class="key" id="D4"></div>
+    <div class="key" id="E4"></div>
+    <div class="key" id="F4"></div>
+    <!--ABAJO-->
+    <div class="key" id="G4"></div>
+    <div class="key" id="A4"></div>
+    <div class="key" id="B4"></div>
+    <div class="key" id="C5"></div>   
+    </div>
+  </div>
+  <div id="contentpdf">
+    <img src="Imagenes/caratula.JPG" alt="foto" width="300">  
+    <button id="generator" class="generator"><i class="fa fa-print" aria-hidden="true"></i></button>
+  </div>
+  <div id="myModalquincena" class="modalquincena">
+    <div class="modal-content">
+        <div class="modal-header">
+    <h2 id="h2quincena">QUINCENA</h2>
+    <a id="printtabla"><i class="fa fa-print"></i></a>
+            <span class="closequincena">X</span>
+        </div>
+        <div class="modal-body">
+          <div id="mdfk">
+            <span id="awaitmdfk">Cargando...</span>
+            <span id="awaitmdfk1">No hay Quincena por entregar</span>
+          </div>         
+        </div>
+      </div>
+    </div>
+    </body>
+   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="JS/pruebatime.js"></script>  
+    <script src="JS/llamado.js"></script>  
+    <script src="JS/main.js"></script> 
+    <script src="JS/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="JS/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+</html>
